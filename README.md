@@ -1,1 +1,247 @@
-# demo0
+# demo0<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประวัติส่วนตัว - น้องใบเตย</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            max-width: 450px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, #38bdf8, #0284c7);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .avatar-container {
+            width: 110px;
+            height: 110px;
+            background: white;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .avatar-container i {
+            font-size: 55px;
+            color: #0284c7;
+        }
+
+        .card-header h1 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .nickname {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 15px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            display: inline-block;
+        }
+
+        .card-body {
+            padding: 30px 25px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 16px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+            transition: all 0.2s;
+        }
+
+        .info-item:hover {
+            background: #f0f9ff;
+            transform: translateX(5px);
+        }
+
+        .icon-box {
+            width: 45px;
+            height: 45px;
+            background: #e0f2fe;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+        }
+
+        .icon-box i {
+            font-size: 1.2rem;
+            color: #0284c7;
+        }
+
+        .info-content .label {
+            font-size: 0.85rem;
+            color: #64748b;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .info-content .value {
+            font-size: 1.05rem;
+            color: #1e293b;
+            font-weight: 600;
+        }
+
+        /* ตกแต่งแท็กวิชาที่ชอบเพิ่มเติม */
+        .subject-tag {
+            display: inline-block;
+            background: #f0f9ff;
+            color: #0369a1;
+            padding: 2px 10px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin-right: 6px;
+            border: 1px solid #bae6fd;
+        }
+        
+        .subject-tag i {
+            margin-right: 4px;
+            font-size: 0.8rem;
+        }
+
+        /* ตกแต่งแท็กเพื่อนสนิท */
+        .friends-all {
+            display: inline-block;
+            background: #f0fdf4;
+            color: #15803d;
+            padding: 2px 10px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            border: 1px solid #bbf7d0;
+        }
+
+        /* ตกแต่งสีพิเศษสำหรับไอเทมสีที่ชอบ */
+        .color-dot {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background-color: #38bdf8;
+            border-radius: 50%;
+            margin-left: 8px;
+            vertical-align: middle;
+            border: 2px solid white;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <div class="card-header">
+            <div class="avatar-container">
+                <i class="fa-solid fa-user-female"></i> 
+            </div>
+            <h1>ด.ญ. ณัฐนิชา เทพวงศ์</h1>
+            <span class="nickname"><i class="fa-solid fa-heart"></i> ชื่อเล่น: ใบเตย</span>
+        </div>
+
+        <div class="card-body">
+            
+            <div class="info-item">
+                <div class="icon-box">
+                    <i class="fa-solid fa-cake-candles"></i>
+                </div>
+                <div class="info-content">
+                    <span class="label">วันเกิด</span>
+                    <span class="value">25 พฤษภาคม 2554</span>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="icon-box">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                </div>
+                <div class="info-content">
+                    <span class="label">วิชาที่ชอบ</span>
+                    <span class="value">
+                        <span class="subject-tag"><i class="fa-solid fa-language"></i>อังกฤษ</span>
+                        <span class="subject-tag"><i class="fa-solid fa-flask-vial"></i>วิทยาศาสตร์</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="icon-box">
+                    <i class="fa-solid fa-bowl-food"></i>
+                </div>
+                <div class="info-content">
+                    <span class="label">อาหารที่ชอบ</span>
+                    <span class="value">ก๋วยเตี๋ยว</span>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="icon-box">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
+                <div class="info-content">
+                    <span class="label">สีที่ชอบ</span>
+                    <span class="value">สีฟ้า <span class="color-dot"></span></span>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="icon-box">
+                    <i class="fa-solid fa-user-group"></i>
+                </div>
+                <div class="info-content">
+                    <span class="label">เพื่อนสนิท</span>
+                    <span class="value">
+                        <span class="friends-all"><i class="fa-solid fa-star"></i> ทุกคนในห้อง</span>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
