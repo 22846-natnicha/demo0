@@ -130,6 +130,34 @@
             font-weight: 600;
         }
 
+        /* ตกแต่งแท็กวิชาที่ชอบเพิ่มเติม */
+        .subject-tag {
+            display: inline-block;
+            background: #f0f9ff;
+            color: #0369a1;
+            padding: 2px 10px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin-right: 6px;
+            border: 1px solid #bae6fd;
+        }
+        
+        .subject-tag i {
+            margin-right: 4px;
+            font-size: 0.8rem;
+        }
+
+        /* ตกแต่งแท็กเพื่อนสนิท */
+        .friends-all {
+            display: inline-block;
+            background: #f0fdf4;
+            color: #15803d;
+            padding: 2px 10px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            border: 1px solid #bbf7d0;
+        }
+
         /* ตกแต่งสีพิเศษสำหรับไอเทมสีที่ชอบ */
         .color-dot {
             display: inline-block;
@@ -149,9 +177,10 @@
     <div class="profile-card">
         <div class="card-header">
             <div class="avatar-container">
-                <i class="fa-solid fa-user-female"></i> </div>
+                <i class="fa-solid fa-user-female"></i> 
+            </div>
             <h1>ด.ญ. ณัฐนิชา เทพวงศ์</h1>
-            <span class="nickname"><i class="fa-solid fa-heart-container"></i> ชื่อเล่น: ใบเตย</span>
+            <span class="nickname"><i class="fa-solid fa-heart"></i> ชื่อเล่น: ใบเตย</span>
         </div>
 
         <div class="card-body">
@@ -163,6 +192,19 @@
                 <div class="info-content">
                     <span class="label">วันเกิด</span>
                     <span class="value">25 พฤษภาคม 2554</span>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="icon-box">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                </div>
+                <div class="info-content">
+                    <span class="label">วิชาที่ชอบ</span>
+                    <span class="value">
+                        <span class="subject-tag"><i class="fa-solid fa-language"></i>อังกฤษ</span>
+                        <span class="subject-tag"><i class="fa-solid fa-flask-vial"></i>วิทยาศาสตร์</span>
+                    </span>
                 </div>
             </div>
 
@@ -183,6 +225,18 @@
                 <div class="info-content">
                     <span class="label">สีที่ชอบ</span>
                     <span class="value">สีฟ้า <span class="color-dot"></span></span>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="icon-box">
+                    <i class="fa-solid fa-user-group"></i>
+                </div>
+                <div class="info-content">
+                    <span class="label">เพื่อนสนิท</span>
+                    <span class="value">
+                        <span class="friends-all"><i class="fa-solid fa-star"></i> ทุกคนในห้อง</span>
+                    </span>
                 </div>
             </div>
 
